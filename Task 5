@@ -1,0 +1,393 @@
+//Task 1
+//var is the function scope, we can reassign and redeclare in same scope.
+//let and const are block scope 
+//In let we can reassign but we can't redeclare it again.
+//In const we can't reassign and redeclare.
+
+//Task 2
+//Yes, "var" can be redeclare  but "let" and "const" connot redeclare.
+
+//Task 3
+// var x = 5;
+// let y = 10;
+// const z = 15;
+// x = 20; //the value is changed
+// y = 25; //the value is changed
+// //z = 30; //if we declare this it show error because we cannot change the value of const.
+// console.log(x, y, z);  // Output : 20 , 25 , 15
+
+//Task 4
+//Declaring means creating a variable .
+// Initializing means giving value to that variable.
+
+//Task 5
+//let a; here we just decalred the variable not given any value.
+//console.log(a); Output : undefined
+
+//Task 6
+//Hoisting is the process of declaring the variable before its code exection.
+//example:
+//console.log(a);
+//var a = 10;
+
+//Task 7
+//undefined means decalred the variable but the value is not assigned.
+//null means assigned value but the value represent abscene of value.
+
+//Task 8
+//console.log(typeof null); //object
+//console.log(typeof undefined); //undefined
+//console.log(typeof []); //object
+//console.log(typeof {}); //object
+
+//Task 9
+//"==" (loose equal) checks the value on both side if its equal or not.
+//"===" (strict equal) checks the value on both side if its equal or not and also check both data type are same.
+//Task 10
+// ++i - Pre-increment: increases the value first and then uses it.
+// i++ - Post-increment: uses the value first and then increases it.
+//Task 11
+// let x = 10;
+// let y = "5";
+// console.log(x + y); 105
+// console.log(x - y); 5
+// console.log(x * y); 50
+// console.log(x / y); 2
+//Task 12
+/ AND &&
+// Returns true when both conditions are true.
+// console.log(5 > 3 && 10 > 5);
+// true
+// OR ||
+// Returns true when at least one condition is true.
+// console.log(5 > 10 || 10 > 5);
+// true
+// NOT !
+// Reverses true/false
+// console.log(!(5 > 3));
+// false
+//Task 13
+//console.log(5 > 3 && 10 > 5);  True
+// console.log(5 > 10 || 10 > 5); true
+// console.log(!(5 > 3));  false
+//Task 14
+// The ternary operator is a short form of if...else.
+// condition ? valueIfTrue : valueIfFalse;
+// let age = 20;
+
+// let result = age >= 18 ? "Adult" : "Minor";
+
+// console.log(result);
+// Adult
+//Task 15
+// Implicit conversion happens automatically.
+// Explicit conversion is when we manually convert the type.
+//Task 16
+// console.log(Number("123"));
+// console.log(Number("hello"));
+// console.log(Number(true));
+// console.log(Number(false));
+// console.log(Boolean(0));
+// console.log(Boolean("hello"));
+// 123
+// NaN
+// 1
+// 0
+// false
+// true
+//Task 17
+// NaN means Not-a-Number.
+// It occurs when JavaScript tries to perform an invalid numeric conversion/calculation.
+// let result = Number("hello");
+// console.log(result);
+// NaN
+// Task 18
+// if-else is useful when you have conditions involving comparisons or complex logic.
+// switch is useful when checking one value against several specific cases.
+// Task 19
+// let age = 20;
+// if(age >= 18) {
+//     console.log("Adult");
+// } else {
+//     console.log("Minor");
+// }
+// Adult
+// Task 20
+// An if statement inside another if statement is called a nested if.
+// let age = 25;
+// let hasId = true;
+
+// if (age >= 18) {
+
+//     if (hasId) {
+//         console.log("Entry allowed");
+//     }
+
+// }
+//Task 21
+/ let number = 10;
+
+// let result = number % 2 === 0 ? "Even" : "Odd";
+
+// console.log(result);
+
+// Task 22
+// let number = 10;
+// while
+// Condition is checked before execution.
+
+// do...while
+// Code executes first, then condition is checked.
+
+// let result = number % 2 === 0 ? "Even" : "Odd";
+
+// console.log(result);
+//Task 23
+// for(let i = 1; i <= 5; i++) {
+//     console.log(i);
+// }
+// output:
+// 1
+// 2
+// 3
+// 4
+// 5
+//Task 24
+// for-of iterates over the values of an iterable, such as an array.
+// for-in iterates over the keys/indexes of an object or array.
+//Task 25
+let sum = 0;
+
+for (let n = 1; n <= 100; n++) {
+    sum = sum + n;
+}
+
+console.log(sum);
+
+// Output:
+// 5050
+// Q26: What is the difference between slice and splice?
+
+// slice()
+// Does not modify the original array.
+// Used to extract a portion of an array.
+// let arr = [1, 2, 3, 4];
+// let result = arr.slice(1, 3);
+// console.log(result); // [2, 3]
+// console.log(arr);    // [1, 2, 3, 4]
+
+// splice()
+// Modifies the original array.
+// Can add, remove, or replace elements.
+// let arr = [1, 2, 3, 4];
+// arr.splice(1, 2);
+// console.log(arr);// [1, 4]
+// Q27: What will be the output?
+// let arr = [1, 2, 3];
+// arr.push(4);
+// arr.pop();
+// arr.unshift(0);
+// arr.shift();
+// console.log(arr);
+
+// Step by step:
+// [1, 2, 3]
+// [1, 2, 3, 4]   // push
+// [1, 2, 3]      // pop
+// [0, 1, 2, 3]   // unshift
+// [1, 2, 3]      // shift
+// output: [1, 2, 3]
+
+
+// Q28: What is the difference between function declaration and function expression?
+// Function declaration
+// function add(a, b) {
+//     return a + b;
+// }   
+// console.log(add(2, 3));
+
+// function add(a, b) {
+//     return a + b;
+// }
+
+// Function expression
+// The function is assigned to a variable.
+// const add = function(a, b) {
+//     return a + b;
+// };
+// Task 29 - IIFE
+// ------------------------------------------
+
+(function() {
+    console.log("Welcome to JavaScript");
+})();
+
+
+(function(product, discount) {
+    console.log(product + " has " + discount + "% discount");
+})("Laptop", 20);
+
+
+// ------------------------------------------
+// Task 30 - Callback / Higher Order Function
+// ------------------------------------------
+
+function welcomeMessage() {
+    console.log("Welcome");
+}
+
+function execute(callback) {
+    callback();
+}
+
+execute(welcomeMessage);
+
+// welcomeMessage is the callback function.
+// execute is the higher-order function.
+
+
+// ------------------------------------------
+// Task 31 - Generator Function
+// ------------------------------------------
+
+function* cashback() {
+    yield "10% cashback";
+    yield "20% cashback";
+    yield "30% cashback";
+    yield "Better luck next time";
+}
+
+let cashbackResult = cashback();
+
+for (let value of cashbackResult) {
+    console.log(value);
+}
+
+
+// ==========================================
+// Task 32 - EMPLOYEE MANAGEMENT SYSTEM
+// ==========================================
+
+let employees = [
+    {
+        name: "Arun",
+        age: 25,
+        department: "IT",
+        role: "Developer",
+        salary: 40000
+    },
+    {
+        name: "Priya",
+        age: 24,
+        department: "HR",
+        role: "HR Executive",
+        salary: 35000
+    },
+    {
+        name: "Naveen",
+        age: 26,
+        department: "Finance",
+        role: "Accountant",
+        salary: 45000
+    },
+    {
+        name: "Karthik",
+        age: 27,
+        department: "IT",
+        role: "Tester",
+        salary: 38000
+    }
+];
+
+
+// 1. Using for...of
+console.log("EMPLOYEE DETAILS");
+
+for (let employee of employees) {
+    console.log(employee);
+}
+
+
+// 2. Using for...in
+console.log("EMPLOYEE KEY AND VALUES");
+
+for (let employee of employees) {
+
+    for (let key in employee) {
+        console.log(key, employee[key]);
+    }
+
+    console.log("----------------");
+}
+
+
+// 3. Function to display employee information
+
+function displayEmployee(name, age, department, role, salary) {
+    console.log("Name:", name);
+    console.log("Age:", age);
+    console.log("Department:", department);
+    console.log("Role:", role);
+    console.log("Salary:", salary);
+}
+
+
+// 4. Passing employee information to function
+
+displayEmployee(
+    "Prakash",
+    23,
+    "IT",
+    "Developer",
+    40000
+);
+
+
+// 5. Return employee salary
+
+function getSalary(employeeSalary) {
+    return employeeSalary;
+}
+
+let employeeSalary = getSalary(40000);
+
+console.log("Employee Salary:", employeeSalary);
+
+
+// 6. Condition
+
+if (employeeSalary >= 40000) {
+    console.log("Salary is 40000 or above");
+} else {
+    console.log("Salary is below 40000");
+}
+
+
+// 7. Arrow function
+
+let yearlySalary = (salary) => {
+    return salary * 12;
+};
+
+console.log("Yearly Salary:", yearlySalary(40000));
+
+
+// 8. Generator for Employee Benefits
+
+function* benefits() {
+    yield "Medical Insurance";
+    yield "Transport";
+    yield "Food Allowance";
+    yield "Bonus";
+}
+
+let employeeBenefits = benefits();
+
+console.log("EMPLOYEE BENEFITS");
+
+for (let benefit of employeeBenefits) {
+    console.log(benefit);
+}
+
+
+
